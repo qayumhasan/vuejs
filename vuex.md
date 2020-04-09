@@ -25,9 +25,11 @@ const store = new Vuex.Store( <br>
     export default { <br>
 
         name:'List', <br>
+        <b>** mounted method like as __contractor. In here mounted method send a request to vuex for data.**</b>
         mounted(){ <br>
             return this.$store.dispatch("allcategory") <br>
         }, <br>
+        <b>** After mounted method sending request for data now it store on getallcategory method **</b>
         computed:{ <br>
             getallcategory(){ <br>
             
