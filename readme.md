@@ -1,8 +1,8 @@
 #Vue js
 ## Globul axios base url set on app.js:
-  window.axios.defaults.baseURL ='https://lara-vue-6488e.firebaseio.com'
-  window.axios.defaults.headers.common['Authorization'] ='Qayum hasan'
-  window.axios.defaults.headers.get['Accepts'] ='application/json'
+  window.axios.defaults.baseURL ='https://lara-vue-6488e.firebaseio.com'<br>
+  window.axios.defaults.headers.common['Authorization'] ='Qayum hasan'<br>
+  window.axios.defaults.headers.get['Accepts'] ='application/json'<br>
   
 ## Add Vue Router on app.js
   import VueRouter from 'vue-router'<br>
@@ -24,6 +24,13 @@
   import addcategory from './components/category/addcategory.vue';<br>
   export const routes = [<br>
     { path: '/add/category', component: addcategory },<br>
-    { path: '/category', component: categorylist },<br>
-    { path: '/user', component: userlist },<br>
   ]<br>
+ 
+## add vfrom on app.js
+  // V-form
+import { Form, HasError, AlertError } from 'vform'<br>
+
+Vue.component(HasError.name, HasError)<br>
+Vue.component(AlertError.name, AlertError)<br>
+window.Form = Form;<br>
+  
