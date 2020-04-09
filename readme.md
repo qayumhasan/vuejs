@@ -33,4 +33,7 @@ import { Form, HasError, AlertError } from 'vform'<br>
 Vue.component(HasError.name, HasError)<br>
 Vue.component(AlertError.name, AlertError)<br>
 window.Form = Form;<br>
+
+## Navigaton on page to other 
+  this.$router.push('/allcategory');
   
