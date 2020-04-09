@@ -17,4 +17,36 @@ const store = new Vuex.Store( <br>
   });<br>
 
 <b>********* write store/index.js file like as vuex.js file  **********<b>
+ 
+ <b>********* When show data using vuex  **********<b>
+ 
+  
+<script>
+    export default { <br>
+
+        name:'List', <br>
+        mounted(){ <br>
+            return this.$store.dispatch("allcategory") <br>
+        }, <br>
+        computed:{ <br>
+            getallcategory(){ <br>
+            
+
+              return this.$store.getters.getCategory <br>
+            } <br>
+        }, <br>
+        methods:{ <br>
+            deleteCategory(id){ <br>
+                axios.get('/blog/category/' +id) <br>
+                    .then(()=>{ <br>
+                        this.$store.dispatch("allcategory") <br>
+                    }) <br>
+            } <br>
+        }, <br>
+     
+    
+    } <br>
+</script>  <br>
+ 
+ 
 
