@@ -1,27 +1,39 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+
 
 require('./bootstrap');
 
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-Vue.use(VueRouter);
+window.Vue = require('vue');
+window.axios = require('axios');
+
+
+window.axios.defaults.baseURL ='https://lara-vue-6488e.firebaseio.com'
+window.axios.defaults.headers.common['Authorization'] ='Qayum hasan'
+window.axios.defaults.headers.get['Accepts'] ='application/json'
+
+// import vue ruter
+
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 
 import {routes} from './route';
 
+// V-form
+import { Form, HasError, AlertError } from 'vform'
 
-// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('app', require('./public/main.vue').default);
+Vue.component(HasError.name, HasError)
+Vue.component(AlertError.name, AlertError)
+window.Form = Form;
 
 const router = new VueRouter({
-    routes // short for `routes: routes`
-  })
+  routes, // short for `routes: routes`
+  mode:'hash',
+})
 
+
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    
 });
