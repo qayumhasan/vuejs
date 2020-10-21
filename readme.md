@@ -36,4 +36,14 @@ window.Form = Form;<br>
 
 ## Navigaton on page to other 
   this.$router.push('/allcategory');
+## Vue name route
+  {
+        path: '/service/:id',
+        component: require('./components/views/contact/contact-us').default,
+        name: "service",
+    },
+  ** In template section
+  <router-link :to="{ name: 'service', params: { id: category.id }}">- {{category.name}}</router-link>
+  ** find dynamic route parms value
+  let id=this.$route.params.id
   
