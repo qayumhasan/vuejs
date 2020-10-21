@@ -42,8 +42,10 @@ window.Form = Form;<br>
         component: require('./components/views/contact/contact-us').default,
         name: "service",
     },
-  ** In template section
+  ** In template section **
+  
   <router-link :to="{ name: 'service', params: { id: category.id }}">- {{category.name}}</router-link>
-  ** find dynamic route parms value
+  
+  ** find dynamic route parms value **
   let id=this.$route.params.id
   
