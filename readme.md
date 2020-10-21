@@ -44,8 +44,8 @@ window.Form = Form;<br>
     },
   ** In template section **
   
-  <router-link :to="{ name: 'service', params: { id: category.id }}">- {{category.name}}</router-link>
+      <router-link :to="{ name: 'service', params: { id: category.id }}">- {{category.name}}</router-link>
   
   ** find dynamic route parms value **
-  let id=this.$route.params.id
+      let id=this.$route.params.id
   
