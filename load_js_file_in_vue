@@ -1,0 +1,10 @@
+//this is one method
+var loadScript = function(src) {
+  var tag = document.createElement('script');
+  tag.async = false;
+  tag.src = src;
+  document.getElementsByTagName('body').appendChild(tag);
+}
+loadScript('//cdnjs.com/some/library.js')
+loadScript('//cdnjs.com/some/other/library.js')
+
