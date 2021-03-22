@@ -7,3 +7,8 @@
 ````
 this.$route.params.product_slug
 ````
+
+##If NPM RUN DEV SHOW MIX ERROR
+```
+npm install laravel-mix@latest --save-dev
+```
