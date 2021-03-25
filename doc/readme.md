@@ -12,3 +12,13 @@ this.$route.params.product_slug
 ```
 npm install laravel-mix@latest --save-dev
 ```
+
+## Add AXIOS DEFAULT URL
+  *** In master.blade.php file
+```
+ <meta name="api-base-url" content="{{ url('api/') }}" />
+```
+  *** In bootstrap.js file
+ ```
+    window.axios.defaults.baseURL = document.head.querySelector('meta[name="api-base-url"]').content;
+ ```
